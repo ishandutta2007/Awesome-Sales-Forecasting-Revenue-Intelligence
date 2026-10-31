@@ -1,231 +1,93 @@
-# Awesome-Sales-Forecasting-Revenue-Intelligence
+# Awesome Sales Forecasting & Revenue Intelligence [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Sales Forecasting & Revenue Intelligence Ecosystem
+> A curated list of cutting-edge **Sales Forecasting**, **Revenue Intelligence**, and **Pipeline Analytics** software platforms, machine learning models, and open-source tools.
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Pipeline Forecasting, Conversation Intelligence & Self-Hosted Revenue Analytics*  
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Sales Forecasting & Revenue Intelligence**. These tools enable revenue teams to predict deal outcomes, analyze sales conversations, identify pipeline risk, and forecast revenue with confidence—turning gut-feel projections into data-backed commitments.
-
-
-
-**Examples** include HubSpot Predictable AI Forecasting, Clari, Gong, BoostUp.ai, Revenue.io, Aviso, InsightSquared, Salesforce Einstein Forecasting, Salesloft, and Troops (the category leaders).
-
-
-
-**Open-source emphasis**: Sales Forecasting & Revenue Intelligence is a domain where open-source tooling is **fragmented and largely immature for the full enterprise experience**, but genuinely viable for **specific slices** of the problem. **LedgerMind AI** provides the strongest standalone revenue intelligence engine—transaction-based revenue tracking, 30-day linear regression forecasting with confidence intervals, Z-score anomaly detection, and Claude AI-powered insights (with deterministic fallback) . **AI Business Intelligence Platform** (GeekYasuo) offers a broader enterprise BI stack with ML forecasting models for revenue, sales, and churn, plus natural language querying . For **conversation intelligence** (the Gong equivalent), there is **no mature open-source platform**—the closest is **agentic-os**'s Gong-to-Insight pipeline, a Python script that extracts objections, buying signals, and competitive mentions from call transcripts . The critical caveat: **no open-source project replicates Clari's multi-source pipeline aggregation or Gong's at-scale conversation analytics**—those require integrating CRM, email, calendar, and call recording systems that open-source tools address only piecemeal.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[HubSpot Predictable AI Forecasting](https://www.hubspot.com/)**  
-
-  AI-powered revenue forecasting within HubSpot's Sales Hub; predicts deal outcomes and pipeline revenue based on historical patterns and CRM activity.
-
-
-
-- **[Clari](https://www.clari.com/)**  
-
-  The benchmark for revenue intelligence; aggregates CRM, email, calendar, and call data to forecast revenue, identify pipeline risk, and surface deal insights for revenue leaders.
-
-
-
-- **[Gong](https://www.gong.io/)**  
-
-  Conversation intelligence platform; records and analyzes sales calls to extract objections, buying signals, and coaching insights, then correlates them with deal outcomes and forecasts.
-
-
-
-- **[BoostUp.ai](https://www.boostup.ai/)**  
-
-  Revenue intelligence platform combining forecasting, pipeline analytics, and conversation intelligence; positioned for revenue operations teams.
-
-
-
-- **[Revenue.io](https://www.revenue.io/)**  
-
-  Revenue operations platform with real-time guidance during calls and AI-powered forecasting.
-
-
-
-- **[Aviso](https://www.aviso.com/)**  
-
-  AI-driven revenue intelligence platform with forecasting, pipeline inspection, and deal risk scoring.
-
-
-
-- **[InsightSquared](https://www.insightsquared.com/)**  
-
-  Revenue analytics and forecasting platform; provides pipeline visibility and predictive insights for sales leaders.
-
-
-
-- **[Salesforce Einstein Forecasting](https://www.salesforce.com/)**  
-
-  AI-powered forecasting within Salesforce CRM; predicts deal outcomes and revenue based on historical data and activity patterns.
-
-
-
-- **[Salesloft](https://salesloft.com/)**  
-
-  Sales engagement platform with forecasting and revenue intelligence capabilities; combines cadences, conversations, and deal analytics.
-
-
-
-- **[Troops](https://www.troops.ai/)**  
-
-  Revenue intelligence platform (acquired by Salesforce) with pipeline alerts, forecasting, and deal insights delivered through Slack.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Revenue Intelligence & Forecasting Engines
-
-
-
-- **[LedgerMind AI](https://github.com/Auspicious14/ledgermind-ai)**  
-
-  The most focused open-source **revenue intelligence engine** for small businesses . Features: **revenue and profit tracking** with daily/monthly aggregations; product performance and margin analysis; **30-day revenue forecast** via linear regression with confidence intervals and transparent R² accuracy; **Z-score anomaly detection** with spike/drop classification, severity levels, and human-readable explanations; **Claude AI integration** for 6 insight categories (revenue, profitability, risk, opportunity, warning, general) with priority scoring and actionable recommendations, plus deterministic fallback when API is unavailable; PDF/HTML export of business health reports; Next.js dashboard with KPI cards, interactive charts, and responsive design . CSV upload for transaction data; PostgreSQL via Prisma . **Best for small businesses wanting AI-powered revenue intelligence with forecasting and anomaly detection**—but it is transaction-data-focused, not a CRM-native pipeline forecasting tool.
-
-
-
-- **[AI Business Intelligence Platform (GeekYasuo)](https://github.com/GeekYasuo/ai-business-intelligence-platform)**  
-
-  Enterprise AI-powered **business intelligence platform** with ML forecasting and natural language querying . Features: **revenue, sales, and churn forecasting models** with confidence intervals and model accuracy tracking; **real-time anomaly detection** using Isolation Forest and LSTM autoencoders; **natural language querying** ("What were our top 3 products by revenue last quarter?") with AI-powered responses and visualizations; modern React/TypeScript frontend with Redux Toolkit and Chart.js/D3; Node.js/Express backend with GraphQL; Python ML services (FastAPI, TensorFlow, scikit-learn, OpenAI GPT-4) . Docker/Kubernetes deployment. **Best for teams wanting a full BI stack with ML forecasting and NL querying**—but it is a broad platform rather than a sales-specific revenue intelligence tool, and requires OpenAI API access.
-
-
-
-### Conversation Intelligence (Gong Alternative)
-
-
-
-- **[agentic-os Gong-to-Insight Pipeline](https://github.com/LazyIsEfficient/agentic-os/blob/main/.claude/skills/revenue-intelligence/README.md)**  
-
-  The closest open-source equivalent to **conversation intelligence**, but it is a **Python script**, not a platform . Works with the Gong API or plain transcript files . Extracts: **objections** categorized as pricing, timing, competition, authority, or need; **buying signals** (budget confirmed, timeline mentioned, decision maker engaged, champion identified); **competitive mentions** with sentiment; **pricing discussions** with dollar amounts; **content topics** for recurring objection patterns; and **follow-up drafts** for personalized outbound . Outputs structured JSON with call temperature (WARM/HOT/COLD) . **Best for teams wanting transcript analysis without Gong's cost**—but it requires transcripts (from Gong or elsewhere) and does not record or transcribe calls itself.
-
-
-
-### Sales Forecasting & Analytics Dashboards
-
-
-
-- **[Horilla CRM](https://github.com/horilla/horilla-crm)**  
-
-  Free and open-source **HR and CRM software** (LGPL-2.1) with a **Forecasting** module for revenue predictions and sales analytics alongside Big Deal Alerts for high-value opportunities . Features: leads, opportunities with customizable stages, campaign management with ROI analysis, activity tracking, email integration, interactive dashboards, and advanced reports . Docker deployment with PostgreSQL . **Best for teams wanting a full CRM with built-in forecasting**—but the forecasting is basic compared to dedicated revenue intelligence platforms .
-
-
-
-- **[Django-CRM](https://github.com/DjangoCRM/DjangoCRM)**  
-
-  Comprehensive open-source **enterprise CRM** with **Sales Forecasting & Analytics** generating detailed forecasts and reports . Features: lead management, deal management, email integration, collaborative CRM, mass mailing, and analytics including income summaries and sales funnels . Django 5.2/Python 3.10+, MySQL/PostgreSQL . **Best for Django teams wanting CRM with forecasting**—but like Horilla, forecasting is a module rather than a specialized engine .
-
-
-
-- **[SalesIQ](https://github.com/badrr06/SalesIq)**  
-
-  Open-source **sales management and forecasting system** (Flask, Chart.js) . Features: CRUD for products/customers/sales; dashboard with KPIs; **monthly sales + 6-month forecast** (ARIMA if statsmodels available, else Linear Regression); top products; CSV export . MySQL or SQLite . **Best for small businesses wanting lightweight sales tracking and forecasting**—but it is sales-only, without CRM or conversation data .
-
-
-
-- **[MarketIQ](https://github.com/AmirhosseinHonardoust/Market-IQ)**  
-
-  Open-source **Streamlit-powered analytics platform** with SQL-driven pipelines, interactive visualization, and **Prophet forecasting** . Features: KPI dashboard (revenue, orders, customers, AOV, MoM trends); Prophet predicts future sales with confidence intervals; multi-view charts; real-time filters; CSV/image export . SQLite/PostgreSQL-ready . **Best for analysts wanting a quick sales forecasting dashboard**—but it is a standalone analytics tool, not integrated with CRM or pipeline data .
-
-
-
-### Revenue Attribution & Content ROI
-
-
-
-- **[agentic-os Revenue Attribution Mapper](https://github.com/LazyIsEfficient/agentic-os/blob/main/.claude/skills/revenue-intelligence/README.md)**  
-
-  Python script that maps content (blog posts, videos, podcasts, webinars) to **closed deals** using first-touch, linear, or time-decay attribution models . Produces content-to-revenue mapping, CPA by content type, and content gap analysis by funnel stage . **Best for content-led growth teams** wanting to prove content ROI—but it is a script requiring your content and deal data, not a platform .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **RevenueOS** — Self-hosted "revenue department" (MIT) that crawls your site, ad exports, lead lists, and mailbox to find opportunities; executes approved actions (SEO content, ads fixes, outreach) and measures outcomes . **Requires human approval for every action**—no automatic sends/spends . **Best for founders wanting an AI-assisted revenue ops workflow**—but it is early-stage and action-oriented rather than forecasting-focused .
-
-- **skill-analytics-reporting (zavora-ai)** — Revenue intelligence **skill for AI agents** (Apache-2.0) with 28 MCP tools for metrics, funnels, anomaly detection, forecasting, and dashboards . **Not a platform**—it is a skill library for AI agents to query analytics data, requiring `mcp-analytics` and data sources .
-
-- **Green-AI-Hub ai-based-sales-forecasting** — Open-source sales forecasting backend (Flask) with AI model training and optional frontend; MIT licensed . **Research project**—verify production maturity, but demonstrates the model-training-to-API pattern .
-
-- **Superstore Analytics Portfolio** — Streamlit dashboard with Holt-Winters forecasting, RFM segmentation, and ROI simulation . **Portfolio project**—for learning patterns, not production deployment .
-
-
-
-**Frameworks for building custom systems**: For **standalone revenue intelligence with forecasting and anomaly detection**, LedgerMind AI . For **broad BI with ML forecasting and NL querying**, AI Business Intelligence Platform . For **conversation transcript analysis**, agentic-os Gong-to-Insight pipeline (requires transcripts) . For **CRM with basic forecasting**, Horilla or Django-CRM . For **content ROI attribution**, agentic-os Revenue Attribution Mapper . No open-source project replicates **Clari's multi-source pipeline aggregation** or **Gong's at-scale call recording and analysis**—those require commercial platforms.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Sales forecasting and revenue intelligence platforms handling deal data and call recordings must comply with applicable privacy regulations (GDPR, CCPA) and call recording consent laws; **AI-generated forecasts and insights should be treated as decision support, not guarantees**—model accuracy varies and human judgment remains essential.
-
-- **Open-source sales forecasting and revenue intelligence is fragmented and immature for the full enterprise experience**—LedgerMind AI provides a focused revenue intelligence engine , and the agentic-os scripts demonstrate conversation analysis patterns . However, **no open-source project replicates Clari's multi-source pipeline aggregation or Gong's at-scale conversation recording and analysis**—organizations requiring those capabilities should evaluate commercial platforms or invest in significant custom integration.
-
-- Verify license terms for commercial use; LedgerMind AI is open-source (check repository) , Horilla CRM uses LGPL-2.1 , and Django-CRM is open-source .
-
-
+Track top SaaS products and open-source GitHub repositories for predictive pipeline forecasting, B2B sales conversation intelligence, deal risk inspection, and self-hosted revenue operations analytics.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Key Architectural & Implementation Patterns](#key-architectural--implementation-patterns)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & License](#disclaimer--license)
 
-**Made for revenue operations leaders, sales analysts, and teams building forecasting and intelligence infrastructure.**  
+---
 
-Let's make sales forecasting more open, but with clear eyes about the multi-source integration and conversation intelligence gaps that commercial platforms still fill.
+## Sector Overview & Market Dynamics
+
+The global Revenue Intelligence and Sales Forecasting software market is valued at approximately **$4.2B to $4.5B** and is projected to expand past **$10.7B to $18B+ by 2030** (growing at an 11%–15% CAGR), propelled by autonomous AI revenue agents, LLM-based call reasoning, and predictive time-series models. Structurally, the ecosystem exhibits a **hybrid concentration**: the upper market is heavily concentrated around dominant CRM anchors and multi-billion-dollar enterprise suites (Salesforce, HubSpot, Gong, and Clari) that hold captive CRM data, while the lower and mid tiers remain moderately fragmented with specialized point solutions competing across conversational analysis, real-time rep guidance, and niche statistical forecasting.
+
+---
+
+## SaaS & Hosted Platforms
+
+The table below catalogs top SaaS sales forecasting and revenue intelligence platforms, sorted in descending order by estimated company size (market capitalization / enterprise valuation):
+
+| Product | Company Size (Valuation / Revenue) | Starting Pricing (Specific Tier) | Free Tier / Trial Limit | Key Focus & Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Salesforce Sales Cloud](https://www.salesforce.com/products/sales-cloud/)** (Einstein Forecasting) | ~$280B+ Market Cap (~$41.5B Revenue) | **$25 / user / month** (*Starter Suite* tier; Enterprise at $175/user/mo, Einstein 1 at $500/user/mo) | **30-day free trial** (Full platform trial access without credit card; no permanent free plan) | CRM market leader featuring Einstein AI predictive pipeline analysis, deal opportunity scoring, and activity forecasting. |
+| **[HubSpot Sales Hub](https://www.hubspot.com/products/sales)** (Predictable AI) | ~$30B+ Market Cap (~$3.1B Revenue) | **$20 / user / month** (*Starter* tier; Professional with AI Forecasting at $100/user/mo) | **Free Forever Plan** (Capped at 2 user seats, 1 deal pipeline, 1,000 contacts; no native AI forecasting) | Inbound CRM and sales execution platform integrating native pipeline forecasting, rep task tracking, and conversation summaries. |
+| **[Gong](https://www.gong.io/)** | ~$7.25B Valuation (~$500M+ ARR) | **$100 / user / month** (Base license, billed annually; plus ~$5,000/yr platform fee) | **0 days** (No self-serve free trial or free tier; proof of concept and demos via enterprise sales only) | Benchmark conversation intelligence and revenue AI engine recording calls, tracking buying signals, and scoring deal health. |
+| **[Clari](https://www.clari.com/)** | ~$2.6B Valuation (~$250M+ ARR) | **$100 / user / month** (Core forecasting module, billed annually; platform base minimum applies) | **0 days** (No free trial or free tier available; custom enterprise pilots scoped via sales team) | Enterprise revenue platform aggregating CRM, email, calendar, and call interactions for predictive pipeline governance. |
+| **[Salesloft](https://salesloft.com/)** | ~$2.3B Valuation (~$200M+ ARR) | **$125 / user / month** (Advanced sales engagement tier, billed annually) | **0 days** (No self-serve free trial or free tier; gated behind customized enterprise demo cycles) | Sales execution and revenue orchestration suite combining cadences, buyer engagement tracking, and pipeline deal forecasting. |
+| **[Troops](https://www.troops.ai/)** | ~$100M+ Acquisition (Acquired by Salesforce) | **$60 / user / month** (Integrated as Slack Sales Elevate in Salesforce) | **30-day free trial** (Available via Slack/Salesforce ecosystem trial; standalone product discontinued) | Workflow and revenue signal automation tool pushing pipeline inspection, forecast updates, and deal alerts into Slack. |
+| **[Revenue.io](https://www.revenue.io/)** | ~$100M+ Est. Valuation (Goldman Sachs backed) | **$75 / user / month** (*Activate* tier dialer & guidance; *Engage* at $120/user/mo) | **0 days** (No self-serve free tier for core suite; selective free trial offered only for *Revenue Roleplay* add-on) | Real-time conversation guidance, AI sales dialer, pipeline inspection, and automated Salesforce CRM forecasting. |
+| **[BoostUp.ai](https://www.boostup.ai/)** (Terret) | ~$50M–$100M Est. Valuation ($43M+ Funding) | **$51 / user / month** (Base revenue intelligence package, billed annually) | **0 days** (No out-of-the-box self-serve free trial; custom 14-day vendor-assisted pilots by request) | RevOps platform delivering predictive forecasting, risk scoring, multi-tier pipeline rollups, and activity capture. |
+| **[Aviso](https://www.aviso.com/)** | ~$50M–$80M Est. Valuation ($46M+ Funding) | **$40 / user / month** (Entry enterprise module; full suite scales to $100/user/mo) | **14-day pilot / trial** (Vendor-assisted structured evaluation period upon enterprise qualification; no public free plan) | AI-driven revenue intelligence with multi-quarter forecasting, automated CRM hygiene, and Win/Loss opportunity grading. |
+| **[InsightSquared](https://www.insightsquared.com/)** (Mediafly) | ~$40M–$60M Est. Valuation ($60M+ Raised) | **$51 / user / month** (Baseline RevOps tier, billed annually) | **0 days** (No self-serve free trial or freemium tier; scheduled guided sandbox demonstrations only) | Revenue analytics and forecasting dashboard providing historical pipeline pacing, win-rate analysis, and coaching metrics. |
+
+---
+
+## Open-Source GitHub Projects
+
+The table below lists community and open-source sales forecasting engines, revenue intelligence scripts, and demand prediction models, sorted in descending order by GitHub stargazers count:
+
+| Repository | GitHub Stars | Primary Language / Stack | Architecture & Description |
+| :--- | :--- | :--- | :--- |
+| **[LenzDu / Kaggle-Competition-Favorita](https://github.com/LenzDu/Kaggle-Competition-Favorita)** | [![GitHub stars](https://img.shields.io/github/stars/LenzDu/Kaggle-Competition-Favorita?style=social&color=white)](https://github.com/LenzDu/Kaggle-Competition-Favorita/stargazers) | Python / GBDT / NNs | 5th place world solution for large-scale grocery retail sales forecasting utilizing gradient boosted decision trees and neural networks. |
+| **[davidthaler / Walmart_competition_code](https://github.com/davidthaler/Walmart_competition_code)** | [![GitHub stars](https://img.shields.io/github/stars/davidthaler/Walmart_competition_code)](https://github.com/davidthaler/Walmart_competition_code/stargazers) | R / Time Series | Production-proven 1st place solution for the Walmart store and department sales forecasting competition featuring complex seasonal adjustments. |
+| **[mollyryanruby / sales_forecasting](https://github.com/mollyryanruby/sales_forecasting)** | [![GitHub stars](https://img.shields.io/github/stars/mollyryanruby/sales_forecasting)](https://github.com/mollyryanruby/sales_forecasting/stargazers) | Python / Jupyter | Benchmarking suite of 5 machine learning and statistical time-series techniques for multi-horizon product and revenue prediction. |
+| **[horilla / horilla-crm](https://github.com/horilla/horilla-crm)** | [![GitHub stars](https://img.shields.io/github/stars/horilla/horilla-crm)](https://github.com/horilla/horilla-crm/stargazers) | Python / Django / PostgreSQL | Free and open-source CRM (LGPL-2.1) with a dedicated Sales Forecasting module, opportunity stage tracking, and Big Deal Alerts. |
+| **[Akajiaku11 / Sales-Forecasting](https://github.com/Akajiaku11/Sales-Forecasting)** | [![GitHub stars](https://img.shields.io/github/stars/Akajiaku11/Sales-Forecasting)](https://github.com/Akajiaku11/Sales-Forecasting/stargazers) | Python / Statsmodels / ARIMA | End-to-end sales forecasting pipeline predicting future order revenue using Box-Jenkins ARIMA modeling and residual diagnostics. |
+| **[samirsaci / ml-forecast-features-eng](https://github.com/samirsaci/ml-forecast-features-eng)** | [![GitHub stars](https://img.shields.io/github/stars/samirsaci/ml-forecast-features-eng)](https://github.com/samirsaci/ml-forecast-features-eng/stargazers) | Python / Scikit-Learn | Enterprise-grade feature engineering pipeline for sales and demand forecasting covering lag variables, rolling stats, and calendar indicators. |
+| **[akshitvjain / product-sales-forecasting](https://github.com/akshitvjain/product-sales-forecasting)** | [![GitHub stars](https://img.shields.io/github/stars/akshitvjain/product-sales-forecasting)](https://github.com/akshitvjain/product-sales-forecasting/stargazers) | Python / Statsmodels | Comparative sales forecasting engine evaluating Holt-Winters exponential smoothing, SARIMA, and Linear Regression via MAE, RMSE, and MAPE. |
+| **[30lm32 / ml-time-series-analysis-on-sales-data](https://github.com/30lm32/ml-time-series-analysis-on-sales-data)** | [![GitHub stars](https://img.shields.io/github/stars/30lm32/ml-time-series-analysis-on-sales-data)](https://github.com/30lm32/ml-time-series-analysis-on-sales-data/stargazers) | Python / Scikit-Learn | Supervised machine learning and time-series analysis framework comparing non-linear models and ARIMA on longitudinal commercial sales data. |
+| **[aws-samples / conversation-intelligence-using-aiml-on-aws](https://github.com/aws-samples/conversation-intelligence-using-aiml-on-aws)** | [![GitHub stars](https://img.shields.io/github/stars/aws-samples/conversation-intelligence-using-aiml-on-aws)](https://github.com/aws-samples/conversation-intelligence-using-aiml-on-aws/stargazers) | Python / AWS Bedrock / CDK | Reference conversation intelligence architecture analyzing call recordings for sentiment, objections, action items, and rep performance. |
+| **[AmirhosseinHonardoust / Market-IQ](https://github.com/AmirhosseinHonardoust/Market-IQ)** | [![GitHub stars](https://img.shields.io/github/stars/AmirhosseinHonardoust/Market-IQ)](https://github.com/AmirhosseinHonardoust/Market-IQ/stargazers) | Python / Streamlit / Prophet | Interactive sales analytics dashboard pairing SQL-driven data pipelines with Meta Prophet to forecast multi-month sales revenue with confidence bands. |
+| **[LazyIsEfficient / agentic-os](https://github.com/LazyIsEfficient/agentic-os)** | [![GitHub stars](https://img.shields.io/github/stars/LazyIsEfficient/agentic-os)](https://github.com/LazyIsEfficient/agentic-os/stargazers) | Python / Shell | Gong-to-Insight intelligence pipeline extracting objections, buying signals, competitor mentions, and multi-touch content revenue attribution. |
+| **[DjangoCRM / DjangoCRM](https://github.com/DjangoCRM/DjangoCRM)** | [![GitHub stars](https://img.shields.io/github/stars/DjangoCRM/DjangoCRM)](https://github.com/DjangoCRM/DjangoCRM/stargazers) | Python / Django / MySQL | Enterprise open-source CRM featuring sales analytics funnels, deal management, and built-in monthly/quarterly revenue forecast reports. |
+| **[GeekYasuo / ai-business-intelligence-platform](https://github.com/GeekYasuo/ai-business-intelligence-platform)** | [![GitHub stars](https://img.shields.io/github/stars/GeekYasuo/ai-business-intelligence-platform)](https://github.com/GeekYasuo/ai-business-intelligence-platform/stargazers) | React / TypeScript / Python | AI-powered enterprise BI stack supporting ML revenue and churn forecasting, natural language querying, and Isolation Forest anomaly detection. |
+| **[Auspicious14 / ledgermind-ai](https://github.com/Auspicious14/ledgermind-ai)** | [![GitHub stars](https://img.shields.io/github/stars/Auspicious14/ledgermind-ai)](https://github.com/Auspicious14/ledgermind-ai/stargazers) | Next.js / Prisma / Claude AI | Self-hosted revenue intelligence dashboard delivering 30-day linear regression forecasting, Z-score revenue anomaly detection, and AI audit summaries. |
+| **[badrr06 / SalesIq](https://github.com/badrr06/SalesIq)** | [![GitHub stars](https://img.shields.io/github/stars/badrr06/SalesIq)](https://github.com/badrr06/SalesIq/stargazers) | Python / Flask / Chart.js | Lightweight web-based sales inventory tracking and 6-month ARIMA/Linear Regression revenue forecasting platform with SQLite/MySQL backends. |
+
+---
+
+## Key Architectural & Implementation Patterns
+
+1. **Transactional vs. Pipeline Forecasting**:
+   - **Pipeline-Based (B2B SaaS / High ACV)**: Models deal stages, probability percentages, historical close velocities, slippage rates, and rep bias (e.g., Salesforce Einstein, Clari, BoostUp).
+   - **Transaction-Based (Retail / E-Commerce / Low ACV)**: Evaluates high-frequency historical transactions, seasonality cycles, autoregressive lags, and promotional calendar features using statistical and machine learning models (e.g., ARIMA, Prophet, LightGBM, Holt-Winters).
+2. **Conversation Intelligence Pipeline**:
+   - Audio ingestion $\rightarrow$ Automatic Speech Recognition (ASR / Whisper) $\rightarrow$ Speaker Diarization $\rightarrow$ LLM entity and intent classification (extracting pricing queries, budget indicators, decision-maker hurdles, and competitive mentions).
+3. **Anomaly Detection & Revenue Leakage**:
+   - Statistical thresholds (Z-score variations exceeding $2.5\sigma$) and unsupervised isolation models (Isolation Forest, Autoencoders) to catch sudden drops in closed-won velocity or unexpected margin erosions.
+
+---
+
+## How to Contribute
+
+1. Fork this repository.
+2. Add new tools, models, or repos to `README.md` following standard tabular format.
+3. Verify that all open-source projects include functional repo links and all SaaS solutions include factual pricing/trial details.
+4. Open a pull request with a concise description of your additions.
+
+---
+
+## Disclaimer & License
+
+- This list is community-curated for informational purposes; always verify terms, SOC-2/GDPR compliance, and licensing before production deployment.
+- MIT License.
