@@ -1,33 +1,45 @@
-# Awesome Sales Forecasting & Revenue Intelligence [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Sales Forecasting &amp; Revenue Intelligence Banner" width="100%" />
+</p>
 
-> A curated list of cutting-edge **Sales Forecasting**, **Revenue Intelligence**, and **Pipeline Analytics** software platforms, machine learning models, and open-source tools.
+# 📈 Awesome Sales Forecasting & Revenue Intelligence
 
-Track top SaaS products and open-source GitHub repositories for predictive pipeline forecasting, B2B sales conversation intelligence, deal risk inspection, and self-hosted revenue operations analytics.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a><a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
----
+> 🚀 A curated collection of state-of-the-art **Sales Forecasting**, **Revenue Intelligence**, and **Pipeline Analytics** software platforms, machine learning models, and open-source tools.
 
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Hosted Platforms](#saas--hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Key Architectural & Implementation Patterns](#key-architectural--implementation-patterns)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer & License](#disclaimer--license)
+Track premier SaaS platforms and open-source GitHub repositories for predictive deal pipeline forecasting, B2B sales conversation intelligence, deal slippage detection, and self-hosted revenue operations analytics. 🎯💼
 
 ---
 
-## Sector Overview & Market Dynamics
+## 📑 Table of Contents
 
-The global Revenue Intelligence and Sales Forecasting software market is valued at approximately **$4.2B to $4.5B** and is projected to expand past **$10.7B to $18B+ by 2030** (growing at an 11%–15% CAGR), propelled by autonomous AI revenue agents, LLM-based call reasoning, and predictive time-series models. Structurally, the ecosystem exhibits a **hybrid concentration**: the upper market is heavily concentrated around dominant CRM anchors and multi-billion-dollar enterprise suites (Salesforce, HubSpot, Gong, and Clari) that hold captive CRM data, while the lower and mid tiers remain moderately fragmented with specialized point solutions competing across conversational analysis, real-time rep guidance, and niche statistical forecasting.
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Platforms](#-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🏗️ Key Architectural & Implementation Patterns](#️-key-architectural--implementation-patterns)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📊 Star History](#-star-history)
+- [⚖️ Disclaimer & License](#️-disclaimer--license)
 
 ---
 
-## SaaS & Hosted Platforms
+## 🌐 Sector Overview & Market Dynamics
+
+The global Revenue Intelligence and Sales Forecasting software market is valued at approximately **$4.2B to $4.5B** and is projected to expand past **$10.7B to $18B+ by 2030** (growing at an 11%–15% CAGR), propelled by autonomous AI revenue agents, LLM-based call reasoning, and predictive time-series models. 📊 
+
+Structurally, the ecosystem exhibits a **hybrid concentration**: the upper market is heavily concentrated around dominant CRM anchors and multi-billion-dollar enterprise suites (Salesforce, HubSpot, Gong, and Clari) that hold captive CRM data, while the lower and mid tiers remain moderately fragmented with specialized point solutions competing across conversational analysis, real-time rep guidance, and niche statistical forecasting. 🔄✨
+
+---
+
+## 🏢 SaaS & Hosted Platforms
 
 The table below catalogs top SaaS sales forecasting and revenue intelligence platforms, sorted in descending order by estimated company size (market capitalization / enterprise valuation):
 
-| Product | Company Size (Valuation / Revenue) | Starting Pricing (Specific Tier) | Free Tier / Trial Limit | Key Focus & Capabilities |
+| Product | 🏢 Company Size (Valuation / Revenue) | 🏷️ Starting Pricing (Specific Tier) | ⏳ Free Tier / Trial Limit | 💡 Key Focus & Capabilities |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Salesforce Sales Cloud](https://www.salesforce.com/products/sales-cloud/)** (Einstein Forecasting) | ~$280B+ Market Cap (~$41.5B Revenue) | **$25 / user / month** (*Starter Suite* tier; Enterprise at $175/user/mo, Einstein 1 at $500/user/mo) | **30-day free trial** (Full platform trial access without credit card; no permanent free plan) | CRM market leader featuring Einstein AI predictive pipeline analysis, deal opportunity scoring, and activity forecasting. |
 | **[HubSpot Sales Hub](https://www.hubspot.com/products/sales)** (Predictable AI) | ~$30B+ Market Cap (~$3.1B Revenue) | **$20 / user / month** (*Starter* tier; Professional with AI Forecasting at $100/user/mo) | **Free Forever Plan** (Capped at 2 user seats, 1 deal pipeline, 1,000 contacts; no native AI forecasting) | Inbound CRM and sales execution platform integrating native pipeline forecasting, rep task tracking, and conversation summaries. |
@@ -42,11 +54,11 @@ The table below catalogs top SaaS sales forecasting and revenue intelligence pla
 
 ---
 
-## Open-Source GitHub Projects
+## 💻 Open-Source GitHub Projects
 
 The table below lists community and open-source sales forecasting engines, revenue intelligence scripts, and demand prediction models, sorted in descending order by GitHub stargazers count:
 
-| Repository | GitHub Stars | Primary Language / Stack | Architecture & Description |
+| Repository | ⭐ GitHub Stars | 🛠️ Primary Language / Stack | 🔍 Architecture & Description |
 | :--- | :--- | :--- | :--- |
 | **[LenzDu / Kaggle-Competition-Favorita](https://github.com/LenzDu/Kaggle-Competition-Favorita)** | [![GitHub stars](https://img.shields.io/github/stars/LenzDu/Kaggle-Competition-Favorita?style=social&color=white)](https://github.com/LenzDu/Kaggle-Competition-Favorita/stargazers) | Python / GBDT / NNs | 5th place world solution for large-scale grocery retail sales forecasting utilizing gradient boosted decision trees and neural networks. |
 | **[davidthaler / Walmart_competition_code](https://github.com/davidthaler/Walmart_competition_code)** | [![GitHub stars](https://img.shields.io/github/stars/davidthaler/Walmart_competition_code)](https://github.com/davidthaler/Walmart_competition_code/stargazers) | R / Time Series | Production-proven 1st place solution for the Walmart store and department sales forecasting competition featuring complex seasonal adjustments. |
@@ -66,7 +78,7 @@ The table below lists community and open-source sales forecasting engines, reven
 
 ---
 
-## Key Architectural & Implementation Patterns
+## 🏗️ Key Architectural & Implementation Patterns
 
 1. **Transactional vs. Pipeline Forecasting**:
    - **Pipeline-Based (B2B SaaS / High ACV)**: Models deal stages, probability percentages, historical close velocities, slippage rates, and rep bias (e.g., Salesforce Einstein, Clari, BoostUp).
@@ -78,16 +90,35 @@ The table below lists community and open-source sales forecasting engines, reven
 
 ---
 
-## How to Contribute
+## 🤝 How to Contribute
 
-1. Fork this repository.
-2. Add new tools, models, or repos to `README.md` following standard tabular format.
-3. Verify that all open-source projects include functional repo links and all SaaS solutions include factual pricing/trial details.
-4. Open a pull request with a concise description of your additions.
+1. Fork this repository. 🍴
+2. Add new tools, models, or repos to `README.md` following the standard tabular format. 📝
+3. Verify that all open-source projects include functional repo links and all SaaS solutions include factual pricing/trial details. 🔍
+4. Open a pull request with a concise description of your additions. 🚀
 
 ---
 
-## Disclaimer & License
+## 💖 Support & Sponsorship
 
-- This list is community-curated for informational purposes; always verify terms, SOC-2/GDPR compliance, and licensing before production deployment.
-- MIT License.
+Thank you so much for exploring and using this repository! If this curated ecosystem guide helps your team optimize pipeline predictability or evaluate revenue platforms, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it on GitHub.
+- 🍴 **Fork and contribute** your favorite open-source tools or insights.
+- 📢 **Share it** with your RevOps, data science, and sales engineering colleagues.
+- ☕ **Buy a coffee or sponsor the project**: Support ongoing maintenance and curated research via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your support is deeply appreciated! 🙌
+
+---
+
+## 📊 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Sales-Forecasting-Revenue-Intelligence&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Sales-Forecasting-Revenue-Intelligence&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer & License
+
+- This list is community-curated for informational purposes; always verify terms, SOC-2/GDPR compliance, and licensing before production deployment. 🛡️
+- Released under the [MIT License](https://github.com/ishandutta2007/Awesome-Awesome-Awesome). 📄
